@@ -1,7 +1,7 @@
 {
-  "name": "RawanaLegend",
-  "description": "Tнє ßєѕτ υѕєяϐοτ мα∂є ϐγ @Minukakevin. Made with Love And By Python Language With Hardwork... ❤ ",
-  "logo": "https://telegra.ph/file/e67f5c4e5fc9187eabc93.jpg",
+  "name": "Rawana UserBot",
+  "description": "Tнє ßєѕτ υѕєяϐοτ мα∂є ϐγ @Rawana-Developers. Made with Love And By Python Language With Hardwork... ❤ ",
+  "logo": "https://te.legra.ph/file/00f7f36f128e9366ec578.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -10,9 +10,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/minukakevin/RawanaLegend",
-  "website": "https://github.com/minukakevin/RawanaLegend",
-  "success_url": "https://t.me/",
+  "repository": "https://github.com/Rawana-Developers/Rawana-User-Bot",
+  "website": "https://github.com/Rawana-Developers",
+  "success_url": "https://t.me/Rawana_Developers",
   "env": {
     "ENV": {
       "description": "Set this to ANYTHING will enable heroku.",
