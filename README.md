@@ -19,7 +19,7 @@ BOT_TOKEN = Make A Bot From @BotFather and paste it's token. <br></br>
 BOT_USERNAME = Get the username of that Bot made from @Botfather** <br></br>
 
 # Deploy To Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/minukakevin/RawanaLegend)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Rawana-Developers/Rawana-User-Bot)
 
 # Copyrights
 © Coaded By  ***[රාවණ Developers | ∞™](https://t.me/Rawana_Developers)*** ✓
