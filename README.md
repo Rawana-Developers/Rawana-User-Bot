@@ -21,6 +21,10 @@ BOT_USERNAME = Get the username of that Bot made from @Botfather** <br></br>
 # Deploy To Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Rawana-Developers/Rawana-User-Bot)
 
+#### Get Pyrogram String Session
+<a href="https://replit.com/@RawanaDeveloper/Rawana-User-Bot?v=1"><img src="https://img.shields.io/badge/Run-Repl.it-white?style=for-the-badge&logo=repl.it"></a>
+
+
 # Copyrights
 © Coaded By  ***[රාවණ Developers | ∞™](https://t.me/Rawana_Developers)*** ✓
 
