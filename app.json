@@ -1,17 +1,17 @@
 {
-    "name": "Rawana UserBot",
+    "name": "Ultroid UserBot",
     "description": "Pluggable telegram userbot, made in python using Telethon.",
-    "logo": "https://te.legra.ph/file/00f7f36f128e9366ec578.jpg",
+    "logo": "https://telegra.ph/file/031957757a4f6a5191040.jpg",
     "keywords": [
         "Telethon",
         "telegram",
         "userbot",
         "python",
-        "Rawana"
+        "ultroid"
     ],
-    "repository": "https://github.com/Rawana-Developers/Rawana-User-Bot/",
-    "website": "https://github.com/Rawana-Developers/",
-    "success_url": "https://t.me/Rawana_Developers",
+    "repository": "https://github.com/TeamUltroid/Ultroid",
+    "website": "https://ultroid.tech",
+    "success_url": "https://t.me/TheUltroid",
     "stack": "container",
     "env": {
         "API_ID": {
@@ -48,7 +48,7 @@
         }
     },
     "formation": {
-        "Rawana": {
+        "ultroid": {
             "quantity": 1,
             "size": "free"
         }
