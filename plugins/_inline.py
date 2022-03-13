@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 import re
 import time
@@ -11,10 +11,10 @@ from datetime import datetime
 from os import remove
 
 from git import Repo
-from pyUltroid.dB._core import HELP, LIST
-from pyUltroid.functions.helper import gen_chlog, time_formatter, updater
-from pyUltroid.functions.misc import split_list
-from pyUltroid.misc._assistant import callback, in_pattern
+from pyRawana.dB._core import HELP, LIST
+from pyRawana.functions.helper import gen_chlog, time_formatter, updater
+from pyRawana.functions.misc import split_list
+from pyRawana.misc._assistant import callback, in_pattern
 from telethon import Button
 from telethon.tl.types import InputWebDocument, Message
 from telethon.utils import resolve_bot_file_id
@@ -24,7 +24,7 @@ from ._help import _main_help_menu
 
 # ================================================#
 
-TLINK = INLINE_PIC or "https://telegra.ph/file/74d6259983e0642923fdb.jpg"
+TLINK = INLINE_PIC or "https://te.legra.ph/file/b61e429b2728d5a5df265.jpg"
 helps = get_string("inline_1")
 
 add_ons = udB.get_key("ADDONS")
@@ -43,8 +43,8 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/TeamUltroid/Ultroid"),
-        Button.url("• Support •", url="t.me/UltroidSupport"),
+        Button.url("• Repo •", url="https://github.com/Rawana-Developers/Rawana-User-Bot/"),
+        Button.url("• Support •", url="t.me/Rawana_Bot_Developers"),
     ],
 ]
 
@@ -55,7 +55,7 @@ SUP_BUTTONS = [
 async def inline_alive(o):
     MSG = "• **Ultroid Userbot •**"
     WEB0 = InputWebDocument(
-        "https://telegra.ph/file/acd4f5d61369f74c5e7a7.jpg", 0, "image/jpg", []
+        "https://te.legra.ph/file/b61e429b2728d5a5df265.jpg", 0, "image/jpg", []
     )
     RES = [
         await o.builder.article(
@@ -74,7 +74,7 @@ async def inline_alive(o):
         RES,
         private=True,
         cache_time=300,
-        switch_pm="👥 ULTROID PORTAL",
+        switch_pm="👥 RAWANA PORTAL",
         switch_pm_param="start",
     )
 
