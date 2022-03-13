@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Ultroid Support
-    url: https://t.me/UltroidSupport
+  - name: Rawana Support
+    url: https://t.me/Rawana_Developers
     about: Please drop your doubts or queries there for an immediate response.
-  - name: Documentation
-    url: https://ultroid.tech/
-    about: Basic documentation for setting up.
+  - name: Updert
+    url: https://t.me/Rawana_Bot_Developers
+    about: This UserBot Updert
