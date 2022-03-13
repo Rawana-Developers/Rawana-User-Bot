@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 # https://github.com/xditya/TeleBot/blob/master/telebot/plugins/mybot/pmbot/incoming.py
 
@@ -11,9 +11,9 @@
 
 import os
 
-from pyUltroid.dB.asst_fns import *
-from pyUltroid.dB.botchat_db import *
-from pyUltroid.functions.helper import inline_mention
+from pyRawana.dB.asst_fns import *
+from pyRawana.dB.botchat_db import *
+from pyRawana.functions.helper import inline_mention
 from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.custom import Button
 from telethon.tl.functions.channels import GetFullChannelRequest
