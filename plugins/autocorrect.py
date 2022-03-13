@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available
 
@@ -14,7 +14,7 @@
 import string
 
 from . import udB  # ignore: pylint
-from . import HNDLR, get_string, ultroid_bot, ultroid_cmd
+from . import HNDLR, get_string, Rawana_bot, Rawana_cmd
 
 try:
     from gingerit.gingerit import GingerIt
@@ -24,7 +24,7 @@ from google_trans_new import google_translator
 from telethon import events
 
 
-@ultroid_cmd(pattern="autocorrect", fullsudo=True)
+@Rawana_cmd(pattern="autocorrect", fullsudo=True)
 async def acc(e):
     if not udB.get_key("AUTOCORRECT"):
         udB.set_key("AUTOCORRECT", "True")
