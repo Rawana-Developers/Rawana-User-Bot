@@ -1,14 +1,14 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 import random
 
-from pyUltroid.functions.misc import create_quotly
-from pyUltroid.functions.tools import TgConverter
+from pyRawana.functions.misc import create_quotly
+from pyRawana.functions.tools import TgConverter
 from telethon import errors
 from telethon.errors.rpcerrorlist import StickersetInvalidError
 from telethon.tl.functions.messages import GetStickerSetRequest as GetSticker
