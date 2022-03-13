@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -21,10 +21,10 @@ from random import shuffle
 from pyUltroid.functions.google_image import googleimagesdownload
 from telethon.tl.functions.photos import UploadProfilePhotoRequest
 
-from . import LOGS, get_string, udB, ultroid_bot, ultroid_cmd
+from . import LOGS, get_string, udB, Rawana_bot, Rawana_cmd
 
 
-@ultroid_cmd(pattern="autopic( (.*)|$)")
+@Rawana_cmd(pattern="autopic( (.*)|$)")
 async def autopic(e):
     search = e.pattern_match.group(1).strip()
     if udB.get_key("AUTOPIC") and not search:
