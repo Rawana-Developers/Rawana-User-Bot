@@ -1,11 +1,11 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
-from pyUltroid.functions.helper import inline_mention
-from pyUltroid.misc._decorators import ultroid_cmd
+from pyRawana.functions.helper import inline_mention
+from pyRawana.misc._decorators import Rawana_cmd
 
 from .. import *
