@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -19,9 +19,9 @@
 
 import re
 
-from pyUltroid.dB import DEVLIST
-from pyUltroid.dB.antiflood_db import get_flood, get_flood_limit, rem_flood, set_flood
-from pyUltroid.functions.admins import admin_check
+from pyRawana.dB import DEVLIST
+from pyRawana.dB.antiflood_db import get_flood, get_flood_limit, rem_flood, set_flood
+from pyRawana.functions.admins import admin_check
 from telethon.events import NewMessage as NewMsg
 
 from . import Button, Redis, asst, callback, eod, get_string, ultroid_bot, ultroid_cmd
@@ -30,7 +30,7 @@ _check_flood = {}
 
 if Redis("ANTIFLOOD"):
 
-    @ultroid_bot.on(
+    @Rawana_bot.on(
         NewMsg(
             chats=list(get_flood().keys()),
         ),
@@ -88,7 +88,7 @@ async def unmuting(e):
     )
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="setflood ?(\\d+)",
     admins_only=True,
 )
@@ -103,7 +103,7 @@ async def setflood(e):
         return await eod(e, get_string("antiflood_4").format(input_))
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="remflood$",
     admins_only=True,
 )
@@ -118,7 +118,7 @@ async def remove_flood(e):
     await e.eor(get_string("antiflood_2"), time=5)
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="getflood$",
     admins_only=True,
 )
