@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -20,12 +20,12 @@
    List the currently AI added users.
 """
 
-from pyUltroid.functions.tools import get_chatbot_reply
+from pyRawana.functions.tools import get_chatbot_reply
 
 from . import eod, get_string, inline_mention, udB, ultroid_cmd
 
 
-@ultroid_cmd(pattern="repai")
+@Rawana_cmd(pattern="repai")
 async def im_lonely_chat_with_me(event):
     if event.reply_to:
         message = (await event.get_reply_message()).message
@@ -38,17 +38,17 @@ async def im_lonely_chat_with_me(event):
     await event.eor(reply_)
 
 
-@ultroid_cmd(pattern="addai")
+@Rawana_cmd(pattern="addai")
 async def add_chatBot(event):
     await chat_bot_fn(event, type_="add")
 
 
-@ultroid_cmd(pattern="remai")
+@Rawana_cmd(pattern="remai")
 async def rem_chatBot(event):
     await chat_bot_fn(event, type_="remov")
 
 
-@ultroid_cmd(pattern="listai")
+@Rawana_cmd(pattern="listai")
 async def lister(event):
     key = udB.get_key("CHATBOT_USERS") or {}
     users = key.get(event.chat_id, [])

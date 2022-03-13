@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available
 
@@ -37,7 +37,7 @@
 import asyncio
 import io
 
-from pyUltroid.dB.ch_db import (
+from pyRawana.dB.ch_db import (
     add_destination,
     add_source_channel,
     get_destinations,
@@ -52,7 +52,7 @@ from pyUltroid.dB.ch_db import (
 from telethon.errors.rpcerrorlist import FloodWaitError
 from telethon.utils import get_display_name, get_peer_id
 
-from . import LOGS, asst, eor, events, get_string, udB, ultroid_bot, ultroid_cmd
+from . import LOGS, asst, eor, events, get_string, udB, Rawana_bot, Rawana_cmd
 
 ERROR = {}
 
@@ -77,7 +77,7 @@ async def autopost_func(e):
                 await asst.send_message(udB.get_key("LOG_CHANNEL"), Error)
 
 
-@ultroid_cmd(pattern="shift (.*)")
+@Rawana_cmd(pattern="shift (.*)")
 async def _(e):
     x = e.pattern_match.group(1).strip()
     z = await e.eor(get_string("com_1"))
@@ -105,7 +105,7 @@ async def _(e):
     await z.edit("Done")
 
 
-@ultroid_cmd(pattern="asource (.*)")
+@Rawana_cmd(pattern="asource (.*)")
 async def source(e):
     x = e.pattern_match.group(1).strip()
     if not x:
@@ -119,12 +119,12 @@ async def source(e):
     if not is_source_channel_added(y):
         add_source_channel(y)
         await e.eor(get_string("cha_2"))
-        ultroid_bot.add_handler(autopost_func, events.NewMessage())
+        Rawana_bot.add_handler(autopost_func, events.NewMessage())
     elif is_source_channel_added(y):
         await e.eor(get_string("cha_3"))
 
 
-@ultroid_cmd(pattern="dsource( (.*)|$)")
+@Rawana_cmd(pattern="dsource( (.*)|$)")
 async def dd(event):
     chat_id = event.pattern_match.group(1).strip()
     x = await event.eor(get_string("com_1"))
@@ -151,7 +151,7 @@ async def dd(event):
         await eor(x, "Source channel is already removed from database. ", time=3)
 
 
-@ultroid_cmd(pattern="listsource")
+@Rawana_cmd(pattern="listsource")
 async def list_all(event):
     x = await event.eor(get_string("com_1"))
     num = get_no_source_channels()
@@ -184,7 +184,7 @@ async def list_all(event):
         await x.edit(msg)
 
 
-@ultroid_cmd(pattern="adest (.*)")
+@Rawana_cmd(pattern="adest (.*)")
 async def destination(e):
     x = e.pattern_match.group(1).strip()
     if x:
@@ -202,7 +202,7 @@ async def destination(e):
         await e.eor("Destination channel already added")
 
 
-@ultroid_cmd(pattern="ddest( (.*)|$)")
+@Rawana_cmd(pattern="ddest( (.*)|$)")
 async def dd(event):
     chat_id = event.pattern_match.group(1).strip()
     x = await event.eor(get_string("com_1"))
@@ -229,7 +229,7 @@ async def dd(event):
         await eor(x, "Destination channel is already removed from database. ", time=5)
 
 
-@ultroid_cmd(pattern="listdest")
+@Rawana_cmd(pattern="listdest")
 async def list_all(event):
     ultroid_bot = event.client
     x = await event.eor(get_string("com_1"))
@@ -264,4 +264,4 @@ async def list_all(event):
 
 
 if udB.get_key("AUTOPOST"):
-    ultroid_bot.add_handler(autopost_func, events.NewMessage())
+    Rawana_bot.add_handler(autopost_func, events.NewMessage())

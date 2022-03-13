@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -18,7 +18,7 @@
 """
 import random
 
-from . import Carbon, eor, get_string, inline_mention, os, ultroid_cmd
+from . import Carbon, eor, get_string, inline_mention, os, Rawana_cmd
 
 all_col = [
     "Black",
@@ -172,7 +172,7 @@ all_col = [
 ]
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="(rc|c)arbon",
 )
 async def crbn(event):
@@ -201,7 +201,7 @@ async def crbn(event):
     )
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="ccarbon( (.*)|$)",
 )
 async def crbn(event):

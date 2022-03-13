@@ -1,29 +1,29 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
 • `{i}button <text with button format`
    create button u can reply to pic also
 
-Format:- `{i}button Hey There! @UseUltroid 😎.
-[Ultroid | t.me/theUltroid][Support | t.me/UltroidSupport | same]
-[TeamUltroid | t.me/TeamUltroid]`
+Format:- `{i}button Hey There! @Rawana_Developers 😎.
+[Rawana | t.me/Rawana_Developers][Support | t.me/Rawana_bot_Developers | same]
+[TeamRawana | t.me/ICT_Pixo]`
 """
 import os
-from pyUltroid.functions.tools import create_tl_btn, get_msg_button
+from pyRawana.functions.tools import create_tl_btn, get_msg_button
 from telegraph import upload_file as uf
 from telethon.utils import pack_bot_file_id
 
-from . import HNDLR, ultroid_cmd, mediainfo, get_string
+from . import HNDLR, Rawana_cmd, mediainfo, get_string
 from ._inline import something
 
 
-@ultroid_cmd(pattern="button")
+@Rawana_cmd(pattern="button")
 async def butt(event):
     media, wut, text = None, None, None
     if event.reply_to:

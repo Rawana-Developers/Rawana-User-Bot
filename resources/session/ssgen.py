@@ -1,21 +1,22 @@
 #!/usr/bin/python3
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# PLease read the GNU Affero General Public License in <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 import os
 from time import sleep
 
-ULTROID = r"""
-  _    _ _ _             _     _
- | |  | | | |           (_)   | |
- | |  | | | |_ _ __ ___  _  __| |
- | |  | | | __| '__/ _ \| |/ _  |
- | |__| | | |_| | | (_) | | (_| |
-  \____/|_|\__|_|  \___/|_|\__,_|
+RAWANA = r"""
+           ΞΞΞΞΞΞΞΞΞΞΞ         ΞΞΞΞΞΞ       ΞΞ             ΞΞ            ΞΞ     ΞΞΞΞΞΞ       ΞΞΞΞ       ΞΞ     ΞΞΞΞΞ
+           ΞΞ       ΞΞ        ΞΞ    ΞΞ       ΞΞ           ΞΞΞΞ          ΞΞ     ΞΞ    ΞΞ      ΞΞ ΞΞ      ΞΞ    ΞΞ   ΞΞ
+           ΞΞ       ΞΞ       ΞΞ      ΞΞ       ΞΞ         ΞΞ  ΞΞ        ΞΞ     ΞΞ      ΞΞ     ΞΞ  ΞΞ     ΞΞ   ΞΞ     ΞΞ
+           ΞΞΞΞΞΞΞΞΞΞΞ      ΞΞ        ΞΞ       ΞΞ       ΞΞ    ΞΞ      ΞΞ     ΞΞ        ΞΞ    ΞΞ   ΞΞ    ΞΞ  ΞΞΞΞΞΞΞΞΞΞΞ 
+           ΞΞ  ΞΞ           ΞΞ ΞΞΞΞΞΞ ΞΞ        ΞΞ     ΞΞ      ΞΞ    ΞΞ      ΞΞ ΞΞΞΞΞΞ ΞΞ    ΞΞ    ΞΞ   ΞΞ  ΞΞ       ΞΞ
+           ΞΞ   ΞΞ          ΞΞ        ΞΞ         ΞΞ  ΞΞ         ΞΞ  ΞΞ       ΞΞ        ΞΞ    ΞΞ     ΞΞ  ΞΞ  ΞΞ       ΞΞ 
+           ΞΞ    ΞΞ         ΞΞ        ΞΞ          ΞΞΞΞ           ΞΞΞΞ        ΞΞ        ΞΞ    ΞΞ      ΞΞ ΞΞ  ΞΞ       ΞΞ 
+           ΞΞ     ΞΞ        ΞΞ        ΞΞ           ΞΞ             ΞΞ         ΞΞ        ΞΞ    ΞΞ       ΞΞΞΞ  ΞΞ       ΞΞ
 """
 
 
@@ -60,7 +61,7 @@ def telethon_session():
 
         text = "\bDone. Installed and imported Telethon."
     clear_screen()
-    print(ULTROID)
+    print(RAWANA)
     print(text)
 
     # the imports
@@ -77,12 +78,12 @@ def telethon_session():
 
     # logging in
     try:
-        with TelegramClient(StringSession(), API_ID, API_HASH) as ultroid:
-            print("Generating a string session for •ULTROID•")
+        with TelegramClient(StringSession(), API_ID, API_HASH) as Rawana:
+            print("Generating a string session for •Rawana•")
             try:
                 ult = ultroid.send_message(
                     "me",
-                    f"**ULTROID** `SESSION`:\n\n`{ultroid.session.save()}`\n\n**Do not share this anywhere!**",
+                    f"**Rawana** `SESSION`:\n\n`{Rawana.session.save()}`\n\n**Do not share this anywhere!**",
                 )
                 print(
                     "Your SESSION has been generated. Check your Telegram saved messages!"
@@ -90,7 +91,7 @@ def telethon_session():
                 return
             except UserIsBotError:
                 print("You are trying to Generate Session for your Bot's Account?")
-                print("Here is That!\n{ultroid.session.save()}\n\n")
+                print("Here is That!\n{Rawana.session.save()}\n\n")
                 print("NOTE: You can't use that as User Session..")
     except ApiIdInvalidError:
         print(
@@ -106,12 +107,12 @@ def telethon_session():
     except Exception as er:
         print("Unexpected Error Occurred while Creating Session")
         print(er)
-        print("If you think It as a Bug, Report to @UltroidSupport.\n\n")
+        print("If you think It as a Bug, Report to @Rawana_Developers.\n\n")
 
 
 def main():
     clear_screen()
-    print(ULTROID)
+    print(Rawana)
     telethon_session()
     x = input("Run again? (y/n)")
     if x.lower() in ["y", "yes"]:

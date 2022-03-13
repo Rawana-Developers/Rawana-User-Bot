@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available
 
@@ -25,13 +25,13 @@
 import asyncio
 import io
 
-from pyUltroid.dB.broadcast_db import *
+from pyRawana.dB.broadcast_db import *
 from telethon.utils import get_display_name
 
-from . import HNDLR, LOGS, eor, get_string, udB, ultroid_bot, ultroid_cmd
+from . import HNDLR, LOGS, eor, get_string, udB, Rawana_bot, Rawana_cmd
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="addch( (.*)|$)",
     allow_sudo=False,
 )

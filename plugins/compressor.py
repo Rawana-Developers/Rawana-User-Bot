@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -24,7 +24,7 @@ import re
 import time
 from datetime import datetime as dt
 
-from pyUltroid.functions.tools import metadata
+from pyRawana.functions.tools import metadata
 from telethon.errors.rpcerrorlist import MessageNotModifiedError
 from telethon.tl.types import DocumentAttributeVideo
 
@@ -36,12 +36,12 @@ from . import (
     math,
     mediainfo,
     time_formatter,
-    ultroid_cmd,
+    Rawana_cmd,
     uploader,
 )
 
 
-@ultroid_cmd(pattern="compress( (.*)|$)")
+@Rawana_cmd(pattern="compress( (.*)|$)")
 async def _(e):
     cr = e.pattern_match.group(1).strip()
     crf = 27

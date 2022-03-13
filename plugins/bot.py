@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 """
 ✘ Commands Available
 
@@ -39,7 +39,7 @@ from platform import python_version as pyver
 from random import choice
 
 from git import Repo
-from pyUltroid.version import __version__ as UltVer
+from pyRawana.version import __version__ as UltVer
 from telethon import __version__
 from telethon.errors.rpcerrorlist import (
     BotMethodInvalidError,
@@ -52,7 +52,7 @@ from . import (
     INLINE_PIC,
     LOGS,
     OWNER_NAME,
-    ULTROID_IMAGES,
+    RAWANA_IMAGES,
     Button,
     Carbon,
     Telegraph,
@@ -72,38 +72,38 @@ from . import (
     start_time,
     time_formatter,
     udB,
-    ultroid_cmd,
-    ultroid_version,
+    Rawana_cmd,
+    Rawana_version,
     updater,
 )
 
-ULTPIC = INLINE_PIC or choice(ULTROID_IMAGES)
+ULTPIC = INLINE_PIC or choice(RAWANA_IMAGES)
 buttons = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
-        Button.url(get_string("bot_4"), "t.me/UltroidSupport"),
+        Button.url(get_string("bot_3"), "https://github.com/Rawana-Developer/Rawana-User-Bot"),
+        Button.url(get_string("bot_4"), "t.me/Rawana_Developers"),
     ]
 ]
 
 # Will move to strings
 alive_txt = """
-The Ultroid Userbot
+The Rawana Userbot
 
   ◍ Version - {}
-  ◍ Py-Ultroid - {}
+  ◍ Py-Rawana - {}
   ◍ Telethon - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @TheUltroid</b>"
+in_alive = "{}\n\n🌀 <b>Rawana Version -><b> <code>{}</code>\n🌀 <b>PyRawana -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @TheUltroid</b>"
 
 
 @callback("alive")
 async def alive(event):
-    text = alive_txt.format(ultroid_version, UltVer, __version__)
+    text = alive_txt.format(Rawana_version, UltVer, __version__)
     await event.answer(text, alert=True)
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="alive( (.*)|$)",
 )
 async def lol(ult):
@@ -132,7 +132,7 @@ async def lol(ult):
         parse = "html"
         als = in_alive.format(
             header,
-            ultroid_version,
+            Rawana_version,
             UltVer,
             pyver(),
             uptime,
@@ -145,7 +145,7 @@ async def lol(ult):
         als = (get_string("alive_1")).format(
             header,
             OWNER_NAME,
-            ultroid_version,
+            Rawana_version,
             UltVer,
             uptime,
             pyver(),
@@ -188,7 +188,7 @@ async def lol(ult):
     )
 
 
-@ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
+@Rawana_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
 async def _(event):
     start = time.time()
     x = await event.eor("Pong !")
@@ -197,7 +197,7 @@ async def _(event):
     await x.edit(get_string("ping").format(end, uptime))
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="cmds$",
 )
 async def cmds(event):
@@ -207,7 +207,7 @@ async def cmds(event):
 heroku_api = Var.HEROKU_API
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="restart$",
     fullsudo=True,
 )
@@ -222,10 +222,10 @@ async def restartbt(ult):
     if len(sys.argv) > 1:
         os.execl(sys.executable, sys.executable, "main.py")
     else:
-        os.execl(sys.executable, sys.executable, "-m", "pyUltroid")
+        os.execl(sys.executable, sys.executable, "-m", "pyRawana")
 
 
-@ultroid_cmd(
+@Rawana_cmd(
     pattern="shutdown$",
     fullsudo=True,
 )
@@ -239,20 +239,20 @@ async def shutdownbot(ult):
 )
 async def _(event):
     opt = event.pattern_match.group(1).strip()
-    file = f"ultroid{sys.argv[-1]}.log" if len(sys.argv) > 1 else "ultroid.log"
+    file = f"Rawana{sys.argv[-1]}.log" if len(sys.argv) > 1 else "Rawana.log"
     if opt == "heroku":
         await heroku_logs(event)
     elif opt == "carbon" and Carbon:
         event = await event.eor(get_string("com_1"))
         code = open(file, "r").read()[-2500:]
         file = await Carbon(
-            file_name="ultroid-logs",
+            file_name="Rawana-logs",
             code=code,
             backgroundColor=choice(ATRA_COL),
         )
-        await event.reply("**Ultroid Logs.**", file=file)
+        await event.reply("**Rawana Logs.**", file=file)
     elif opt == "open":
-        file = open("ultroid.log", "r").read()[-4000:]
+        file = open("Rawana.log", "r").read()[-4000:]
         return await event.eor(f"`{file}`")
     else:
         await def_logs(event, file)
@@ -272,7 +272,7 @@ async def inline_alive(ult):
     kk = f"<a href={rep}>{y}</a>"
     als = in_alive.format(
         header,
-        ultroid_version,
+        Rawana_version,
         UltVer,
         pyver(),
         uptime,
@@ -316,7 +316,7 @@ async def inline_alive(ult):
     await ult.answer(result)
 
 
-@ultroid_cmd(pattern="update( (.*)|$)")
+@Rawana_cmd(pattern="update( (.*)|$)")
 async def _(e):
     xx = await e.eor(get_string("upd_1"))
     if e.pattern_match.group(1).strip() and (
@@ -326,7 +326,7 @@ async def _(e):
         await bash("git pull -f && pip3 install -r requirements.txt")
         call_back()
         await xx.edit(get_string("upd_7"))
-        os.execl(sys.executable, "python3", "-m", "pyUltroid")
+        os.execl(sys.executable, "python3", "-m", "pyRawana")
         return
     m = await updater()
     branch = (Repo.init()).active_branch
