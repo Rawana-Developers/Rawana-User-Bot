@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 
 import os
@@ -20,7 +20,7 @@ from pyUltroid.functions.helper import (
     numerize,
     time_formatter,
 )
-from pyUltroid.functions.ytdl import dler, get_buttons, get_formats
+from pyRawana.functions.ytdl import dler, get_buttons, get_formats
 from telethon import Button
 from telethon.errors.rpcerrorlist import FilePartLengthInvalidError, MediaEmptyError
 from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
