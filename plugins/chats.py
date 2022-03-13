@@ -1,9 +1,9 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -56,10 +56,10 @@ from telethon.tl.types import (
     UserStatusRecently,
 )
 
-from . import HNDLR, LOGS, asst, con, get_string, mediainfo, os, types, udB, Rawana_cmd
+from . import HNDLR, LOGS, asst, con, get_string, mediainfo, os, types, udB, ultroid_cmd
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="delchat",
     groups_only=True,
 )
@@ -81,7 +81,7 @@ async def _(e):
     )
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="getlink$",
     groups_only=True,
     manager=True,
@@ -112,7 +112,7 @@ async def _(e):
     await e.eor(f"Link:- {link}")
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="create (b|g|c)(?: |$)(.*)",
 )
 async def _(e):
@@ -177,7 +177,7 @@ async def _(e):
 # ---------------------------------------------------------------- #
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="setgpic( (.*)|$)", admins_only=True, manager=True, require="change_info"
 )
 async def _(ult):
@@ -216,7 +216,7 @@ async def _(ult):
     os.remove(replfile)
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="delgpic( (.*)|$)", admins_only=True, manager=True, require="change_info"
 )
 async def _(ult):
@@ -232,7 +232,7 @@ async def _(ult):
     return await ult.eor(text, time=5)
 
 
-@Rawana_cmd(pattern="unbanall$", manager=True, admins_only=True, require="ban_users")
+@ultroid_cmd(pattern="unbanall$", manager=True, admins_only=True, require="ban_users")
 async def _(event):
     xx = await event.eor("Searching Participant Lists.")
     p = 0
@@ -252,7 +252,7 @@ async def _(event):
     await xx.eor(f"{title}: {p} unbanned", time=5)
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="rmusers( (.*)|$)",
     groups_only=True,
     admins_only=True,

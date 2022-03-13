@@ -1,9 +1,9 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -17,8 +17,8 @@
 
 import asyncio
 
-from pyRawana.dB.afk_db import add_afk, del_afk, is_afk
-from pyRawana.dB.pmpermit_db import is_approved
+from pyUltroid.dB.afk_db import add_afk, del_afk, is_afk
+from pyUltroid.dB.pmpermit_db import is_approved
 from telegraph import upload_file as uf
 from telethon import events
 
@@ -37,7 +37,7 @@ from . import (
 old_afk_msg = []
 
 
-@Rawana_cmd(pattern="afk( (.*)|$)", fullsudo=True)
+@ultroid_cmd(pattern="afk( (.*)|$)", fullsudo=True)
 async def set_afk(event):
     if event.client._bot or is_afk():
         return

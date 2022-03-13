@@ -1,9 +1,9 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -20,10 +20,10 @@
 
 from telethon.utils import get_display_name
 
-from . import get_string, udB, Rawana_cmd
+from . import get_string, udB, ultroid_cmd
 
 
-@Rawana_cmd(pattern="addclean$", admins_only=True)
+@ultroid_cmd(pattern="addclean$", admins_only=True)
 async def _(e):
     key = udB.get_key("CLEANCHAT") or []
     if e.chat_id in key:
@@ -33,7 +33,7 @@ async def _(e):
     await e.eor(get_string("clan_1"), time=5)
 
 
-@Rawana_cmd(pattern="remclean$")
+@ultroid_cmd(pattern="remclean$")
 async def _(e):
     key = udB.get_key("CLEANCHAT") or []
     if e.chat_id in key:
@@ -42,7 +42,7 @@ async def _(e):
     await e.eor(get_string("clan_2"), time=5)
 
 
-@Rawana_cmd(pattern="listclean$")
+@ultroid_cmd(pattern="listclean$")
 async def _(e):
     k = udB.get_key("CLEANCHAT")
     if k:

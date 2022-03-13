@@ -1,14 +1,14 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 
 from fuzzywuzzy.process import extractOne
-from pyRawana.dB._core import HELP, LIST
-from pyRawana.functions.tools import cmd_regex_replace
+from pyUltroid.dB._core import HELP, LIST
+from pyUltroid.functions.tools import cmd_regex_replace
 from telethon.errors.rpcerrorlist import (
     BotInlineDisabledError,
     BotMethodInvalidError,
@@ -37,7 +37,7 @@ _main_help_menu = [
 ]
 
 
-@Rawana_cmd(pattern="help( (.*)|$)")
+@ultroid_cmd(pattern="help( (.*)|$)")
 async def _help(ult):
     plug = ult.pattern_match.group(1).strip()
     chat = await ult.get_chat()

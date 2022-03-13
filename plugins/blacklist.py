@@ -1,9 +1,9 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -20,17 +20,17 @@
   'And u Must be Admin in that Chat'
 """
 
-from pyRawana.dB.blacklist_db import (
+from pyUltroid.dB.blacklist_db import (
     add_blacklist,
     get_blacklist,
     list_blacklist,
     rem_blacklist,
 )
 
-from . import events, get_string, udB, Rawana_bot, Rawana_cmd
+from . import events, get_string, udB, ultroid_bot, ultroid_cmd
 
 
-@Rawana_cmd(pattern="blacklist( (.*)|$)", admins_only=True)
+@ultroid_cmd(pattern="blacklist( (.*)|$)", admins_only=True)
 async def af(e):
     wrd = e.pattern_match.group(1).strip()
     chat = e.chat_id
@@ -44,7 +44,7 @@ async def af(e):
     await e.eor(get_string("blk_2").format(wrd))
 
 
-@Rawana_cmd(pattern="remblacklist( (.*)|$)", admins_only=True)
+@ultroid_cmd(pattern="remblacklist( (.*)|$)", admins_only=True)
 async def rf(e):
     wrd = e.pattern_match.group(1).strip()
     chat = e.chat_id
@@ -57,7 +57,7 @@ async def rf(e):
     await e.eor(get_string("blk_4").format(wrd))
 
 
-@Rawana_cmd(pattern="listblacklist$", admins_only=True)
+@ultroid_cmd(pattern="listblacklist$", admins_only=True)
 async def lsnote(e):
     x = list_blacklist(e.chat_id)
     if x:

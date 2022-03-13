@@ -1,9 +1,9 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 
 import asyncio
@@ -11,16 +11,16 @@ import os
 import time
 from random import choice
 
-from pyRawana import *
-from pyRawana.dB import DEVLIST, RAWANA_IMAGES
-from pyRawana.functions.helper import *
-from pyRawana.functions.info import *
-from pyRawana.functions.misc import *
-from pyRawana.functions.tools import *
-from pyRawana.misc._assistant import asst_cmd, callback, in_pattern
-from pyRawana.misc._decorators import ultroid_cmd
-from pyRawana.misc._wrappers import eod, eor
-from pyRawana.version import __version__, Rawana_version
+from pyUltroid import *
+from pyUltroid.dB import DEVLIST, ULTROID_IMAGES
+from pyUltroid.functions.helper import *
+from pyUltroid.functions.info import *
+from pyUltroid.functions.misc import *
+from pyUltroid.functions.tools import *
+from pyUltroid.misc._assistant import asst_cmd, callback, in_pattern
+from pyUltroid.misc._decorators import ultroid_cmd
+from pyUltroid.misc._wrappers import eod, eor
+from pyUltroid.version import __version__, ultroid_version
 from telethon import Button, events
 from telethon.tl import functions, types
 
@@ -28,15 +28,15 @@ from strings import get_string
 
 Redis = udB.get_key
 con = TgConverter
-OWNER_NAME = Rawana_bot.full_name
-OWNER_ID = Rawana_bot.uid
+OWNER_NAME = ultroid_bot.full_name
+OWNER_ID = ultroid_bot.uid
 
 LOG_CHANNEL = udB.get_key("LOG_CHANNEL")
 
 INLINE_PIC = udB.get_key("INLINE_PIC")
 
 if INLINE_PIC is None:
-    INLINE_PIC = choice(RAWANA_IMAGES)
+    INLINE_PIC = choice(ULTROID_IMAGES)
 elif INLINE_PIC == False:
     INLINE_PIC = None
 
@@ -53,7 +53,7 @@ STUFF = {}
 # Feel Free to Add Any other...
 
 NOSPAM_CHAT = [
-    -1001327032795,  # RawanaSupport
+    -1001327032795,  # UltroidSupport
     -1001387666944,  # PyrogramChat
     -1001109500936,  # TelethonChat
     -1001050982793,  # Python

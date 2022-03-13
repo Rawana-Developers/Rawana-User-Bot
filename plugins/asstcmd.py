@@ -1,9 +1,9 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -18,15 +18,15 @@
 """
 import os
 
-from pyRawana.dB.asstcmd_db import *
-from pyRawana.functions.tools import create_tl_btn, format_btn, get_msg_button
+from pyUltroid.dB.asstcmd_db import *
+from pyUltroid.functions.tools import create_tl_btn, format_btn, get_msg_button
 from telegraph import upload_file as uf
 from telethon import events, utils
 
 from . import asst, get_string, mediainfo, ultroid_cmd
 
 
-@Rawana_cmd(pattern="addcmd( (.*)|$)")
+@ultroid_cmd(pattern="addcmd( (.*)|$)")
 async def ac(e):
     wrd = (e.pattern_match.group(1).strip()).lower()
     wt = await e.get_reply_message()
@@ -72,7 +72,7 @@ async def ac(e):
     await e.eor(get_string("asstcmd_4").format(wrd))
 
 
-@Rawana_cmd(pattern="remcmd( (.*)|$)")
+@ultroid_cmd(pattern="remcmd( (.*)|$)")
 async def rc(e):
     wrd = (e.pattern_match.group(1).strip()).lower()
     if not wrd:
@@ -82,7 +82,7 @@ async def rc(e):
     await e.eor(get_string("asstcmd_3").format(wrd))
 
 
-@Rawana_cmd(pattern="listcmd$")
+@ultroid_cmd(pattern="listcmd$")
 async def lscmd(e):
     if list_cmds():
         ok = get_string("asstcmd_6")

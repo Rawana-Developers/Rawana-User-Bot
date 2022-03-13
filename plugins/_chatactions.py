@@ -1,19 +1,19 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 import asyncio
 
-from pyRawana.dB import stickers
-from pyRawana.dB.forcesub_db import get_forcesetting
-from pyRawana.dB.gban_mute_db import is_gbanned
-from pyRawana.dB.greetings_db import get_goodbye, get_welcome, must_thank
-from pyRawana.dB.nsfw_db import is_profan
-from pyRawana.functions.helper import inline_mention
-from pyRawana.functions.tools import async_searcher, create_tl_btn, get_chatbot_reply
+from pyUltroid.dB import stickers
+from pyUltroid.dB.forcesub_db import get_forcesetting
+from pyUltroid.dB.gban_mute_db import is_gbanned
+from pyUltroid.dB.greetings_db import get_goodbye, get_welcome, must_thank
+from pyUltroid.dB.nsfw_db import is_profan
+from pyUltroid.functions.helper import inline_mention
+from pyUltroid.functions.tools import async_searcher, create_tl_btn, get_chatbot_reply
 from telethon import events
 from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest

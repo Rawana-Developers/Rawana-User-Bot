@@ -1,9 +1,9 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 from telethon.errors import (
     BotMethodInvalidError,
@@ -14,15 +14,15 @@ from telethon.errors import (
 from . import LOG_CHANNEL, LOGS, Button, asst, eor, get_string, ultroid_cmd
 
 REPOMSG = """
-• **RAWANA USERBOT** •\n
-• Repo - [Click Here](https://github.com/Rawana-Developers/Rawana-User-Bot/)
-• Addons - [Click Here](https://t.me/Rawana_Bot_Developers)
-• Support - @Rawana_Developers
+• **ULTROID USERBOT** •\n
+• Repo - [Click Here](https://github.com/TeamUltroid/Ultroid)
+• Addons - [Click Here](https://github.com/TeamUltroid/UltroidAddons)
+• Support - @UltroidSupport
 """
 
 RP_BUTTONS = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/Rawana-Developers/Rawana-User-Bot/"),
+        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
         Button.url("Addons", "https://github.com/TeamUltroid/UltroidAddons"),
     ],
     [Button.url("Support Group", "t.me/ultroidsupport")],
@@ -33,7 +33,7 @@ ULTSTRING = """🎇 **Thanks for Deploying Ultroid Userbot!**
 • Here, are the Some Basic stuff from, where you can Know, about its Usage."""
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="repo$",
     manager=True,
 )
@@ -53,13 +53,13 @@ async def repify(e):
     await e.eor(REPOMSG)
 
 
-@Rawana_cmd(pattern="ultroid$")
+@ultroid_cmd(pattern="ultroid$")
 async def useUltroid(rs):
     button = Button.inline("Start >>", "initft_2")
     msg = await asst.send_message(
         LOG_CHANNEL,
         ULTSTRING,
-        file="https://te.legra.ph/file/00f7f36f128e9366ec578.jpg",
+        file="https://telegra.ph/file/54a917cc9dbb94733ea5f.jpg",
         buttons=button,
     )
     if not (rs.chat_id == LOG_CHANNEL and rs.client._bot):

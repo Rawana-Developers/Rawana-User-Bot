@@ -1,9 +1,9 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -44,8 +44,8 @@
 
 import asyncio
 
-from pyRawana.dB import DEVLIST
-from pyRawana.functions.admins import ban_time
+from pyUltroid.dB import DEVLIST
+from pyUltroid.functions.admins import ban_time
 from telethon.errors import BadRequestError
 from telethon.errors.rpcerrorlist import ChatNotModifiedError, UserIdInvalidError
 from telethon.tl.functions.channels import GetFullChannelRequest
@@ -67,7 +67,7 @@ from . import (
 )
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="promote( (.*)|$)", admins_only=True, manager=True, require="add_admins"
 )
 async def prmte(ult):
@@ -95,7 +95,7 @@ async def prmte(ult):
         return await xx.edit(f"`{ex}`")
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="demote( (.*)|$)", admins_only=True, manager=True, require="add_admins"
 )
 async def dmote(ult):
@@ -122,7 +122,7 @@ async def dmote(ult):
         return await xx.edit(f"`{ex}`")
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="ban( (.*)|$)",
     admins_only=True,
     manager=True,
@@ -151,7 +151,7 @@ async def bban(ult):
     await eod(ult, text)
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="unban( (.*)|$)", admins_only=True, manager=True, require="ban_users"
 )
 async def uunban(ult):
@@ -177,7 +177,7 @@ async def uunban(ult):
     await xx.edit(text)
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="kick( (.*)|$)",
     manager=True,
     require="ban_users",
@@ -214,7 +214,7 @@ async def kck(ult):
     await xx.edit(text)
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="tban( (.*)|$)", admins_only=True, manager=True, require="ban_users"
 )
 async def tkicki(e):
@@ -250,7 +250,7 @@ async def tkicki(e):
         return await e.eor(str(m))
 
 
-@Rawana_cmd(pattern="pin$", manager=True, require="pin_messages")
+@ultroid_cmd(pattern="pin$", manager=True, require="pin_messages")
 async def pin(msg):
     if not msg.is_reply:
         return await eor(msg, get_string("pin_1"))
@@ -268,7 +268,7 @@ async def pin(msg):
     await eor(msg, text)
 
 
-@Rawanad_cmd(
+@ultroid_cmd(
     pattern="unpin($| (.*))",
     admins_only=True,
     manager=True,
@@ -291,7 +291,7 @@ async def unp(ult):
     await xx.edit("`Unpinned!`")
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="tpin( (.*)|$)", admins_only=True, manager=True, require="pin_messages"
 )
 async def pin_message(ult):
@@ -317,7 +317,7 @@ async def pin_message(ult):
         LOGS.exception(er)
 
 
-@Rawana_cmd(pattern="purge( (.*)|$)", manager=True, require="delete_messages")
+@ultroid_cmd(pattern="purge( (.*)|$)", manager=True, require="delete_messages")
 async def fastpurger(purg):
     match = purg.pattern_match.group(1).strip()
     try:
@@ -353,7 +353,7 @@ async def fastpurger(purg):
     )
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="purgeme( (.*)|$)",
 )
 async def fastpurgerme(purg):
@@ -401,7 +401,7 @@ async def fastpurgerme(purg):
     )
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="purgeall$",
 )
 async def _(e):
@@ -420,7 +420,7 @@ async def _(e):
         return await e.eor(str(er), time=5)
 
 
-@Rawana_cmd(pattern="pinned", manager=True, groups_only=True)
+@ultroid_cmd(pattern="pinned", manager=True, groups_only=True)
 async def djshsh(event):
     chat = await event.get_chat()
     if isinstance(chat, types.Chat):
@@ -437,7 +437,7 @@ async def djshsh(event):
         await event.eor(get_string("pinned_2").format(msg.message_link))
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="listpinned$",
 )
 async def get_all_pinned(event):
@@ -468,7 +468,7 @@ async def get_all_pinned(event):
     await x.edit(m + a, parse_mode="html")
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="autodelete( (.*)|$)",
     admins_only=True,
 )

@@ -1,9 +1,9 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -45,7 +45,7 @@ from . import bash, con, downloader, get_paste, get_string, udB, ultroid_cmd, up
 opn = []
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="thumbnail$",
 )
 async def _(e):
@@ -60,11 +60,11 @@ async def _(e):
     os.remove(dl)
     nn = "https://telegra.ph" + variable[0]
     udB.set_key("CUSTOM_THUMBNAIL", str(nn))
-    await bash(f"wget {nn} -O resources/extras/Rawana.jpg")
+    await bash(f"wget {nn} -O resources/extras/ultroid.jpg")
     await e.eor(get_string("cvt_6").format(nn), link_preview=False)
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="rename( (.*)|$)",
 )
 async def imak(event):
@@ -101,7 +101,7 @@ async def imak(event):
         f"`{xxx.name}`",
         file=xxx,
         force_document=True,
-        thumb="resources/extras/Rawana.jpg",
+        thumb="resources/extras/ultroid.jpg",
     )
     os.remove(inp)
     await xx.delete()
@@ -117,7 +117,7 @@ conv_keys = {
 }
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="convert( (.*)|$)",
 )
 async def uconverter(event):
@@ -142,7 +142,7 @@ async def uconverter(event):
     await xx.delete()
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="doc( (.*)|$)",
 )
 async def _(event):
@@ -156,12 +156,12 @@ async def _(event):
     with open(input_str, "w") as b:
         b.write(str(a.message))
     await xx.edit(f"**Packing into** `{input_str}`")
-    await event.reply(file=input_str, thumb="resources/extras/Rawana.jpg")
+    await event.reply(file=input_str, thumb="resources/extras/ultroid.jpg")
     await xx.delete()
     os.remove(input_str)
 
 
-@Rawana_cmd(
+@ultroid_cmd(
     pattern="open( (.*)|$)",
 )
 async def _(event):

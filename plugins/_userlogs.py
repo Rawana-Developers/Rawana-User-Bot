@@ -1,14 +1,14 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 import os
 import re
 
-from pyRawana.dB.botchat_db import tag_add, who_tag
+from pyUltroid.dB.botchat_db import tag_add, who_tag
 from telethon.errors.rpcerrorlist import (
     ChannelPrivateError,
     ChatWriteForbiddenError,
@@ -21,13 +21,13 @@ from telethon.errors.rpcerrorlist import (
 from telethon.tl.types import MessageEntityMention, MessageEntityMentionName, User
 from telethon.utils import get_display_name
 
-from . import Rawana_bot, asst, udB, inline_mention, Button, LOGS, get_string, LOG_CHANNEL,  callback, events
+from . import ultroid_bot, asst, udB, inline_mention, Button, LOGS, get_string, LOG_CHANNEL,  callback, events
 
 CACHE_SPAM = {}
 TAG_EDITS = {}
 
 
-@Rawana_bot.on(
+@ultroid_bot.on(
     events.NewMessage(
         incoming=True,
         func=lambda e: (e.mentioned),
@@ -102,7 +102,7 @@ async def all_messages_catcher(e):
 
 if udB.get_key("TAG_LOG"):
 
-    @Rawana_bot.on(events.MessageEdited(func=lambda x: not x.out))
+    @ultroid_bot.on(events.MessageEdited(func=lambda x: not x.out))
     async def upd_edits(event):
         x = event.sender
         if isinstance(x, User) and (x.bot or x.verified):
@@ -174,7 +174,7 @@ if udB.get_key("TAG_LOG"):
         except Exception as er:
             LOGS.exception(er)
 
-    @Rawana_bot.on(
+    @ultroid_bot.on(
         events.NewMessage(
             outgoing=True,
             chats=[udB.get_key("TAG_LOG")],
