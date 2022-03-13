@@ -1,10 +1,10 @@
 # /usr/bin/python3
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# Please read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# PLease read the GNU Affero General Public License in
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 # Standalone file for facilitating local deploys.
 
@@ -26,12 +26,12 @@ def start():
     check_for_py()
 
     print(f"{a}\n\n")
-    print("Welcome to Ultroid, lets start setting up!\n\n")
+    print("Welcome to Rawana UserBot, lets start setting up!\n\n")
     print("Cloning the repository...\n\n")
     os.system("rm -rf Ultroid")
-    os.system("git clone https://github.com/TeamUltroid/Ultroid")
+    os.system("git clone https://github.com/Rawana-Developers/Rawana-User-Bot")
     print("\n\nDone")
-    os.chdir("Ultroid")
+    os.chdir("Rawana")
     clear_screen()
     print(a)
     print("\n\nLet's start!\n")
@@ -66,7 +66,7 @@ def start():
     print(all_done)
     isitdone = input("\n\nIs it all correct? [y/n]")
     if isitdone == "y" or isitdone != "n":
-        # https://github.com/TeamUltroid/Ultroid/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
+        # https://github.com/Rawana-Developers/Rawana-User-Bot/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
         f = open(".env", "w")
         f.write(all_done)
     else:
@@ -123,7 +123,7 @@ def check_for_py():
 
 def gen_session():
     print("\nProcessing...")
-    # https://github.com/TeamUltroid/Ultroid/main/resources/startup/locals.py#L35
+    # https://github.com/Rawana-Developers/Rawana-User-Bot/main/resources/startup/locals.py#L35
     os.system("python3 resources/session/ssgen.py")
 
 
