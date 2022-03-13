@@ -1,16 +1,16 @@
-# Rawana - UserBot
-# Copyright (C) 2021-2022 TeamRawana
+# Ultroid - UserBot
+# Copyright (C) 2021-2022 TeamUltroid
 #
-# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
-from pyRawana import *
-from pyRawana import _ult_cache
-from pyRawana.functions.helper import *
-from pyRawana.functions.tools import get_stored_file
-from pyRawana.misc import owner_and_sudos
-from pyRawana.misc._assistant import asst_cmd, callback, in_pattern
+from pyUltroid import *
+from pyUltroid import _ult_cache
+from pyUltroid.functions.helper import *
+from pyUltroid.functions.tools import get_stored_file
+from pyUltroid.misc import owner_and_sudos
+from pyUltroid.misc._assistant import asst_cmd, callback, in_pattern
 from telethon import Button, custom
 
 from plugins import ATRA_COL
