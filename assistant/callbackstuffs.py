@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 
 import asyncio
@@ -15,15 +15,15 @@ from os import execl, remove
 from random import choice
 
 from bs4 import BeautifulSoup as bs
-from pyUltroid.functions.gDrive import GDriveManager
-from pyUltroid.functions.helper import fast_download, progress, uploader
-from pyUltroid.functions.tools import (
+from pyRawana.functions.gDrive import GDriveManager
+from pyRawana.functions.helper import fast_download, progress, uploader
+from pyRawana.functions.tools import (
     Carbon,
     async_searcher,
     get_paste,
     telegraph_client,
 )
-from pyUltroid.startup.loader import Loader
+from pyRawana.startup.loader import Loader
 from telegraph import upload_file as upl
 from telethon import Button, events
 from telethon.tl.types import MessageMediaWebPage
