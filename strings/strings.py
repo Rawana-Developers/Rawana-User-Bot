@@ -2,7 +2,7 @@ import sys
 from os import listdir, path
 from typing import Any, Dict, List, Union
 
-from pyUltroid import udB, LOGS
+from pyRawana import udB, LOGS
 try:
     from google_trans_new import google_translator
     Trs = google_translator()

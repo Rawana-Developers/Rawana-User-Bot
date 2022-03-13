@@ -1,17 +1,17 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 # ----------------------------------------------------------#
 #                                                           #
-#    _   _ _   _____ ____   ___ ___ ____   __     ______    #
-#   | | | | | |_   _|  _ \ / _ \_ _|  _ \  \ \   / / ___|   #
-#   | | | | |   | | | |_) | | | | || | | |  \ \ / / |       #
-#   | |_| | |___| | |  _ <| |_| | || |_| |   \ V /| |___    #
-#    \___/|_____|_| |_| \_\\___/___|____/     \_/  \____|   #
+#             ____                                          #
+#    \ \   / / ___|                                         #
+#     \ \ / / |    Rawana    UserBot                        #
+#      \ V /| |___                                          #
+#       \_/  \____|                                         #
 #                                                           #
 # ----------------------------------------------------------#
 
@@ -29,21 +29,21 @@ from telethon.errors.rpcerrorlist import (
     ParticipantJoinMissingError,
     ChatSendMediaForbiddenError,
 )
-from pyUltroid import HNDLR, LOGS, asst, udB, vcClient
-from pyUltroid.functions.helper import (
+from pyRawana import HNDLR, LOGS, asst, udB, vcClient
+from pyRawana.functions.helper import (
     bash,
     downloader,
     inline_mention,
     mediainfo,
     time_formatter,
 )
-from pyUltroid.functions.admins import admin_check
-from pyUltroid.functions.tools import is_url_ok
-from pyUltroid.functions.ytdl import get_videos_link
-from pyUltroid.misc import owner_and_sudos, sudoers
-from pyUltroid.misc._assistant import in_pattern
-from pyUltroid.misc._wrappers import eod, eor
-from pyUltroid.version import __version__ as UltVer
+from pyRawana.functions.admins import admin_check
+from pyRawana.functions.tools import is_url_ok
+from pyRawana.functions.ytdl import get_videos_link
+from pyRawana.misc import owner_and_sudos, sudoers
+from pyRawana.misc._assistant import in_pattern
+from pyRawana.misc._wrappers import eod, eor
+from pyRawana.version import __version__ as UltVer
 from telethon import events
 from telethon.tl import functions, types
 from telethon.utils import get_display_name
