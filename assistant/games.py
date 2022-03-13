@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 """
 • `{i}akinator` | `/akinator`
@@ -21,9 +21,9 @@ from html import unescape
 from random import choice, shuffle
 
 import akinator
-from pyUltroid.functions.helper import inline_mention
-from pyUltroid.functions.tools import async_searcher
-from pyUltroid.misc._decorators import ultroid_cmd
+from pyRawana.functions.helper import inline_mention
+from pyRawana.functions.tools import async_searcher
+from pyRawana.misc._decorators import Rawana_cmd
 from telethon.errors.rpcerrorlist import (
     BotMethodInvalidError,
     ChatSendStickersForbiddenError,
@@ -39,7 +39,7 @@ games = {}
 aki_photo = "https://telegra.ph/file/3cc8825c029fd0cab9edc.jpg"
 
 
-@ultroid_cmd(pattern="akinator")
+@Rawana_cmd(pattern="akinator")
 async def akina(e):
     sta = akinator.Akinator()
     games.update({e.chat_id: {e.id: sta}})
