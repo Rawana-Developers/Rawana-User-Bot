@@ -1,16 +1,16 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 from datetime import datetime
 
 from pytz import timezone as tz
-from pyUltroid.dB.asst_fns import *
-from pyUltroid.functions.helper import inline_mention
-from pyUltroid.misc import SUDO_M, owner_and_sudos
+from pyRawana.dB.asst_fns import *
+from pyRawana.functions.helper import inline_mention
+from pyRawana.misc import SUDO_M, owner_and_sudos
 from telethon import Button, events
 from telethon.errors.rpcerrorlist import MessageDeleteForbiddenError
 from telethon.utils import get_display_name
@@ -29,7 +29,7 @@ if Owner_info_msg is None:
 
 **Message Forwards** - {udB.get_key("PMBOT")}
 
-**Ultroid [v{ultroid_version}](https://github.com/TeamUltroid/Ultroid), powered by @TeamUltroid**
+**Rawana [v{Rawana_version}](https://github.com/Rawana-Developers/Rawana-User-Bot/), powered by @Rawana_Developers**
 """
 
 
