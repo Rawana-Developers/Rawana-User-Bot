@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Rawana - UserBot
+# Copyright (C) 2021-2022 TeamRawana
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Rawana-Developers/Rawana-User-Bot/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Rawana-Developers/Rawana-User-Bot/blob/main/LICENSE/>.
 
 import base64
 from datetime import datetime
@@ -11,8 +11,8 @@ from random import choice
 from re import compile as re_compile
 
 from bs4 import BeautifulSoup as bs
-from pyUltroid.functions.misc import google_search
-from pyUltroid.functions.tools import (
+from pyRawana.functions.misc import google_search
+from pyRawana.functions.tools import (
     _webupload_cache,
     async_searcher,
     get_ofox,
